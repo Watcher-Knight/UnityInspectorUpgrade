@@ -1,0 +1,3 @@
+[submodule "Plugins/CSharpStringFormatter"]
+	path = Plugins/CSharpStringFormatter
+	url = https://github.com/Watcher-Knight/CSharpStringFormatter.git
