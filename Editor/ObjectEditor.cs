@@ -1,7 +1,7 @@
-using UnityEngine;
 using UnityEditor;
+using System;
 
-[CustomEditor(typeof(Object), true)]
+[CustomEditor(typeof(UnityEngine.Object), true)]
 public class ObjectEditor : CustomInspector
 {
     public bool UpdateEveryFrame = false;
@@ -13,7 +13,7 @@ public class ObjectEditor : CustomInspector
 
         base.OnInspectorGUI();
 
-        GetDisplayProperties().ForEach(p => EditorGUILayout.LabelField(p.Name.ToTitleCase(), p.GetValue(target).ToString()));
+        Array.ForEach(GetDisplayProperties(),p => EditorGUILayout.LabelField(p.Name.ToTitleCase(), p.GetValue(target).ToString()));
         ShowButtons();
     }
 }
