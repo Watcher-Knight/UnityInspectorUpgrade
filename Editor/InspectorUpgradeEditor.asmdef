@@ -2,8 +2,8 @@
     "name": "InspectorUpgradeEditor",
     "rootNamespace": "",
     "references": [
-        "GUID:b6053e56434a6394cb535d261dadd578",
-        "GUID:0ef724432218b674281d524c203f352a"
+        "InspectorUpgrade",
+        "StringFormatter"
     ],
     "includePlatforms": [
         "Editor"
