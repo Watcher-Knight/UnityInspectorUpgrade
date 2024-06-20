@@ -139,6 +139,7 @@ public class CustomInspector : UnityEditor.Editor
         if (type == typeof(float)) return EditorGUILayout.FloatField((float)value);
         if (type == typeof(string)) return EditorGUILayout.TextField((string)value);
         if (type == typeof(bool)) return EditorGUILayout.Toggle((bool)value);
+        if (type == typeof(Vector2)) return EditorGUILayout.Vector2Field("", (Vector2)value);
         if (typeof(Object).IsAssignableFrom(type)) return EditorGUILayout.ObjectField((Object)value, type, true);
         return null;
     }
@@ -150,7 +151,8 @@ public class CustomInspector : UnityEditor.Editor
             typeof(int),
             typeof(float),
             typeof(string),
-            typeof(bool)
+            typeof(bool),
+            typeof(Vector2)
         };
         if (validTypes.Contains(type)) return true;
         if (typeof(Object).IsAssignableFrom(type)) return true;
